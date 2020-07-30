@@ -1,0 +1,47 @@
+        
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <div id="card-register" class="col-lg-4">
+      
+<div class="card text-center">
+
+  <h5 class="card-header  white-text text-center py-5">
+  <a routerLink="/main"> <img width="100px" height="100px" src="assets/logo_shop.png"></a> 
+  </h5>
+
+  <!--Card content-->
+  <div class="card-body px-lg-5 pt-0">
+
+    <!-- Form -->
+    <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)" class="text-center" style="color: #757575;" action="#!">
+ <br>
+      <!-- Email -->
+      <div class="md-form">
+        <input type="text" ngModel  name="name" id="materialLoginFormEmail" class="form-control text1"  placeholder="Username">
+       
+      </div> <br>
+      <div class="md-form">
+          <input type="email" ngModel  name="email" id="materialLoginFormEmail" class="form-control text1"  placeholder="E-mail">
+         
+        </div><br>
+
+      <!-- Password -->
+      <div class="md-form">
+        <input type="password" ngModel  name="password" id="materialLoginFormPassword" class="form-control text1" placeholder="Password">
+      </div> <br>
+      <div class="md-form">
+          <input type="text" ngModel  name="address" id="materialLoginFormPassword" class="form-control text1" placeholder="address">
+      </div> <br>
+
+      <!-- Sign in button -->
+      <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"
+       type="submit">Register</button>
+
+   </form>
+   
+  </div>
+
+</div>
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
