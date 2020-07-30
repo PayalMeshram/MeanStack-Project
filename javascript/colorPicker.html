@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="" onclick="ColorPicker(event);" src="../Images/ColorPicker.png" alt="">
+    <p id="shwmsg">Selected color</p>
+
+
+    <script>
+        function ColorPicker(e){
+       // document.write("x="+e.clientX);
+       // document.write("y="+e.clientY);
+       if (e.clientX>=8 && e.clientX<=370){
+          if(e.clientY>=9 && e.clientY<=300){
+           document.getElementById("shwmsg").style.color='red';
+          }
+       }
+       if (e.clientX>=371 && e.clientX<=730){
+          if(e.clientY>=9 && e.clientY<=300){
+           document.getElementById("shwmsg").style.color='cyan';
+          }
+       }
+       if (e.clientX>=8 && e.clientX<=370){
+          if(e.clientY>=301 && e.clientY<=575){
+           document.getElementById("shwmsg").style.color='green';
+          }
+       }
+       if (e.clientX>=371 && e.clientX<=730){
+          if(e.clientY>=301 && e.clientY<=575){
+           document.getElementById("shwmsg").style.color='yellow';
+          }
+       }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+      <div class="form-group">
+      <h2>Verify Mobile</h2>
+      <input onkeyup="VerifyMobile()"
+      placeholder="eg.:+91 9876598765"
+      type="text" id="txtMobile" class="form-control">
+      <span id="msgMobile"></span>
+      <div class="form-group"> <br>
+        
+      <h2>Your Password</h2>
+      <input onkeyup="VerifyPassword()"
+      placeholder="4 to 15 chars with atleast one uppercase letter"
+      id="txtPwd" type="text"
+      class="form-control" style="width: 300px;"><br>
+      <meter id="grade" style="width: 200px; height: 30px;"></meter>
+      <span id="msg"></span>
+      </div>
+    
+
+    </div>
+    <script>   
+          function VerifyMobile(){
+            var txtMobile=document.getElementById("txtMobile").value;
+            var regEx=/\+91[0-9]{10}/;
+            var msgMobile=document.getElementById("msgMobile");
+            if(txtMobile.match(regEx)){
+                msgMobile.innerHTML="Mobile Verified";
+                msgMobile.style.color='green';
+
+            }else{
+                msgMobile.innerHTML="Invalid Mobile";
+                msgMobile.style.color='red'
+            }
+        }  
+        function VerifyPassword(){
+            var txtPwd=document.getElementById("txtPwd").value;
+            var regEx=/(?=.*[A-Z]+)\w{4,15}/;
+            var msg=document.getElementById("msg");
+            var grade=document.getElementById("grade");
+
+            function ShowGrade(min,max,value,low,high){
+                grade.min=min; 
+                grade.max=max;
+                grade.value=value;
+                grade.low=low;
+                grade.high=high;
+            }
+            if(txtPwd.match(regEx)){
+                msg.style.color="Green";
+                msg.innerHTML="Strong Password";
+                ShowGrade(1,100,100,0,0);
+            }else{
+            
+            if(txtPwd.length<4){
+                msg.style.color="Red";
+                msg.innerHTML="Poor Password";
+                ShowGrade(1,100,100,60,80);
+            
+            }else{
+            
+                msg.style.color="Yellow";
+                 msg.innerHTML="Weak Password"
+                ShowGrade(1,100,100,40,80);
+            }
+        }
+        }
+    
+        function VerifyMobile(){
+            var txtMobile=document.getElementById("txtMobile").value;
+            var regEx=/\+91[0-9]{10}/;
+            var msgMobile=document.getElementById("msgMobile");
+            if(txtMobile.match(regEx)){
+                msgMobile.innerHTML="Mobile Verified";
+
+            }else{
+                msgMobile.innerHTML="Invalid Mobile";
+
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        height: 200px;
+        width: 300px;
+        border: 2px solid black;
+    }
+</style>
+<body onload="onloadFunction();">
+    <div>
+    <button onclick="a1();">Onclick</button>
+    <button ondblclick="a1();">Ondblclick</button>
+  
+    <input onkeypress="a1();" type="text" placeholder="enter value">
+    
+    <input id="i1" onfocus="a2();" onblur="a3();" type="text" placeholder="type here"><br><br>
+    <input id="i2" oninput="a4();" type="text" placeholder="write here"><p id="p1">whatever you write will display here..</p>
+</div><br>
+    
+<div>
+    <img id="img1" src="../Images/RangeRover.jpg" onmouseover="f1();" onmouseout="f2();">
+</div>
+
+
+<div>
+     <img id="img2" src="../Images/charminar.jpg" onmouseenter="imgMax();"
+     onmouseleave="imgMin();">
+</div>
+ <script>
+     function onloadFunction(){
+         alert("Page refreshed");
+     }
+    function a1(){
+        alert("hello");
+         
+     }
+     function a2(){
+        document.getElementById("i1").style.backgroundColor='red'; 
+     }
+     function a3(){
+        document.getElementById("i1").style.backgroundColor=''; 
+     }
+     function a4(){   
+      var x = document.getElementById("i2").value; 
+      document.getElementById("p1").innerHTML=x;    }
+    function f1(){
+    document.getElementById("img1").src="../Images/RangeRover.jpg" ;
+      }
+    function f2(){
+    document.getElementById("img1").src="../Images/audi.jpg" ;
+      }
+    function imgMax(){
+     var img = document.getElementById("img2");
+     img.style.width = "400px";
+     img.style.height = "400px";
+
+      }
+    function imgMin(){
+     var img = document.getElementById("img2");
+     img.style.width = "200px";
+     img.style.height = "200px";
+     img.style.border ="2px solid black";
+
+      }
+</script>
+</body>
+</html>

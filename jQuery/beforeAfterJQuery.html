@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>jQuery function</title>
+    <style>
+        div{
+            width: 500px;
+            border: 2px solid red;
+            margin: 100px;
+            padding: 10px;
+        }
+        h1{
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Wisdom sprouts</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus nemo tempore atque error voluptates corrupti minima quasi possimus sed cum! Beatae voluptatem cumque similique optio sit laborum eaque rem provident reprehenderit quidem quis ducimus consequatur sed distinctio, inventore, laboriosam maxime minus quibusdam magnam eveniet labore impedit qui deleniti! Sunt, voluptatibus.</p>
+    </div>
+    <button id="a1">Before</button>
+    <button id="a2">after</button> <hr><br>
+
+    <button id="x1">Append</button>
+    <button id="x2">Prepend</button><hr><br>
+
+    <button id="b1">hide</button> 
+    <button id="b2">show</button>
+    
+<script>
+    // adding element using before and after 
+
+     $('#a1').click(function(){
+        $('h1').before("Hello World");
+     });
+     $('#a2').click(function(){
+        $('h1').after("Hello World");
+     });
+
+     // adding element using append prepend
+
+     $('#x1').click(function(){
+        $('h1').prepend("Hello World");
+     });
+     $('#x2').click(function(){
+        $('h1').append("Hello World");
+     });
+
+
+    // for hiding and showing paragraph 
+    $('#b1').click(function(){
+     $('p').hide();
+    })
+    $('#b2').click(function(){
+     $('p').show();
+    })  
+
+</script>
+
+</body>
+</html>

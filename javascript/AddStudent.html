@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Details</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+        <style>
+               #cardDetails {
+                  width:300px;
+                  margin: auto;
+                  color:chartreuse;
+              }
+        </style>
+        <script>
+            function AddStudent(){
+                document.getElementById("cardDetails").style.display = "Block";
+                document.getElementById("cardAdd").style.display="none";
+                document.getElementById("lblId").innerHTML = 
+                document.getElementById("txtId").value;
+
+                document.getElementById("lblName").innerHTML = 
+                    document.getElementById("txtNme").value;
+                    document.getElementById("lbldob").innerHTML = 
+                    document.getElementById("dob").value;
+                    var Male = document.getElementById("txtmale");
+                    var Female = document.getElementById("txtfemale");
+                    var Gender="";
+                    
+                    if(txtmale.checked) {
+                        Gender = Male.value;
+                    }
+                    if(txtfemale.checked) {
+                        Gender = Female.value;
+                    }
+                    document.getElementById("Gender").innerHTML = Gender;
+                    document.getElementById("lblcity").innerHTML = 
+                    document.getElementById("Cities").value;
+                }
+                function CloseDetails() {
+                    document.getElementById("cardDetails").style.display = "none";
+                    document.getElementById("cardAdd").style.display = "block";
+                }
+
+            
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <fieldset id="cardAdd">
+                <legend>Add Student</legend>
+                <div class="form-group">
+                    <label>Student Id</label>
+                    <div>
+                        <input class="form-control" type="number" id="txtId">
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label>Student Name</label>
+                    <div>
+                        <input class="form-control" type="text" id="txtNme">
+                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Date Of Birth</label>
+                    <div>
+                        <input class="form-control" type="date" id="dob">
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label>Gender</label>
+                        <div>
+                            <input type="radio" name="Gender" value="male" id="txtmale"> Male
+                            <input type="radio" name="Gender" value="female" id="txtfemale" > Female
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <div>
+                        <select class="form-control" id="Cities">
+                        <option>Delhi</option>
+                        <option>Hyderdabad</option>
+                        <option>Pune</option>
+                        <option>Mumbai</option>
+                    </select>
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <button onclick="AddStudent()" class="btn btn-primary">Add Student</button>
+
+                </div>
+          </fieldset>
+
+          <br>
+          <div style="display: none" id="cardDetails" class="row">
+                <div class="card-deck bg-warning">
+                    <div class="card">
+                        <div class="card-title" id="lblName"></div>
+                        <div class="card-body">
+                            <dl>
+                                <dt>Student Id</dt>
+                                <dd id="lblId"></dd>
+                                <dt>DOB</dt>
+                                <dd id="lbldob"></dd>
+                                <dt>Gender</dt>
+                                <dd id="Gender"></dd>
+                                <dt>City</dt>
+                                <dd id="lblcity"></dd>
+                            </dl>
+                        </div>
+                        <div id="lblStock" class="card-footer">
+
+                        </div>
+                        <div class="text-center">
+                            <button onclick="CloseDetails()" 
+                            class="btn btn-primary">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+    </body>
+
+</html>

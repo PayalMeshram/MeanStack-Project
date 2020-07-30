@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(178, 178, 197);
+            height: 1200px;
+        
+        }
+        #main{
+            position: absolute;
+            top :50% ;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #onion{
+            position: absolute;
+            top: 10px;
+            left: 450px;
+            transition: all 0.7s ease-in;
+            transition-delay: 0.1s ;
+        }
+        #mintleaves{
+            position: absolute;
+            top: 120px;
+            left: 200px;
+            transition: all 0.8s ease-in;
+            transition-delay: 0.1s ;
+        }
+        #gradient{
+            position: absolute;
+            top: 500px;
+            left: 480px;
+            transition: all 0.7s ease-in;
+            transition-delay: 0.1s ;
+        }
+        #flour{
+            position: absolute;
+            top: 215px;
+            left: 370px;
+            transition: all 0.7s ease-in;
+            transition-delay:0.1s ;
+        }
+        #tomato{
+            position: absolute;
+            top: 580px;
+            left: 300px;
+            transition: all 0.8s ease-in;
+            transition-delay: 0.1s ;
+        }
+        #chilli{
+            position: absolute;
+            top: 295px;
+            left: 180px;
+            transition: all 0.9s ease-in;
+            transition-delay: 0.1s ;
+        }
+        #bellpepper{
+            position: absolute;
+            top: 360px;
+            left: 280px;
+            transition: all 0.8s ease-in;
+            transition-delay: 0.1s ;
+        }
+        #garlic{
+            position: absolute;
+            top: 630px;
+            left: 470px;
+            transition: all 0.9s ease-in;
+            transition-delay: 0.1s ;
+        }
+        #cheeze{
+            position: absolute;
+            top: 30px;
+            left: 300px;
+            transition: all 0.9s ease-in;
+            transition-delay: 0.1s ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scroll Animation</h1>
+    <div id="main">
+      <img src="../Images/pizza.png" id="pizza">
+    </div>
+    <img src="../Images/onion.png" id="onion">
+    <img src="../Images/tomatoess.png" id="tomato">
+    <img src="../Images/flour.png" id="flour">
+    <img src="../Images/chilli.png" id="chilli">
+    <img src="../Images/garlic.png" id="garlic">
+    <img src="../Images/bellpepper.png" id="bellpepper">
+    <img src="../Images/mintleaves.png" id="mintleaves">
+    <img src="../Images/gradient.png" id="gradient">
+    <img src="../Images/chizz1.png" id="cheeze">
+
+    <script>
+        $(document).ready(function(){
+            
+            $(window).scroll(function(){
+                if($(this).scrollTop()>5){
+                    $("#mintleaves").css('left','390px').css('top','240px');
+                    $("#bellpepper").css('left','480px').css('top','330px');
+                    $("#onion").css('left','505px').css('top','110px');
+                    $("#gradient").css('left','550px').css('top','450px');
+                    $("#chilli").css('left','400px').css('top','340px');
+                    $("#flour").css('left','500px').css('top','230px');
+                    $("#tomato").css('left','430px').css('top','440px');
+                    $("#garlic").css('left','510px').css('top','530px');
+                    $("#cheeze").css('left','430px').css('top','160px');
+                    
+
+
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

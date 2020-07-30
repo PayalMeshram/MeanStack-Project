@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Events in jQuery</title>
+</head>
+<body>
+<div>
+    <img src="../Images/audi.jpg" alt="">
+   
+</div><hr>
+<div>
+   
+   <form>
+       <h1>Login Form</h1>
+       <input id="t1" type="text" placeholder="username"><br><br>
+       <input id="t2" type="password" placeholder="password"><br><br>
+       <button>login </button>
+   </form>
+
+</div>
+    <script>
+
+      $('button').dblclick(function(){
+      alert("you clicked twice"); 
+      });
+           
+      $('body').keypress(function(){
+      $("body").css("background-color","lime") ; 
+      });
+      $('body').keyup(function(){
+      $("body").css("background-color","orange") ; 
+      });
+
+      $('img').mouseover(function(){
+      $("img").css("border","2px solid red") ; 
+      });
+
+      $('img').mouseleave(function(){
+     $("img").css("border","2px solid blue") ; 
+      
+      });
+
+      $('#t1,#t2').focus(function(){
+          $(this).css('background-color','red');
+      })
+      $('#t1,#t2').blur(function(){
+          $(this).css('background-color','');
+      });
+
+
+    </script>
+</body>
+</html>

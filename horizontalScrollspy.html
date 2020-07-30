@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+     #scrollspy{
+         position: relative;
+         overflow-y: scroll;
+         height: 300px;
+     }   
+     #container{
+         overflow: hidden;
+     }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+    <div id="scrollspy" data-spy="scroll" data-target=".navbar" data-offset="50">
+     <nav class="navbar navbar-expand-sm bg-dark fixed-top">
+         <ul class="navbar-nav">
+             <li class="nav-item">
+                 <a class="nav-link" href="#list1">List1</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="#list2">List2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#list3">List3</a>
+            </li>
+        
+         </ul>
+     </nav>
+
+     <div id="list1"  class="container-fluid"
+     style="padding-top: 70px; padding-bottom: 70px;">
+         <h1>list 1</h1>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, est nostrum? Nam nihil itaque ad, ipsa dolore earum odit non animi doloribus pariatur provident in libero repellat voluptatum sed optio ipsum quo molestiae minima impedit aliquid! Voluptas cum expedita ratione! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rerum eius! Omnis aut fugit error reprehenderit nesciunt fuga labore provident exercitationem, corporis sint nam nisi tempora.</p>
+     </div>
+     <div id="list2"  class="container-fluid"
+     style="padding-top: 70px; padding-bottom: 70px;">
+        <h1>list 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quam, nesciunt velit ipsa delectus necessitatibus veritatis tempore id sequi voluptatum non repellendus voluptates nemo tenetur rem qui at. Distinctio eligendi ex ducimus iusto porro impedit voluptatem consequatur voluptatum totam nobis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rerum eius! Omnis aut fugit error reprehenderit nesciunt fuga labore provident exercitationem, corporis sint nam nisi tempora.</p>
+    </div>
+    <div id="list3"  class="container-fluid"
+    style="padding-top: 70px; padding-bottom: 70px;">
+        <h1>list 3</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, fuga? Sint earum et eveniet consectetur molestiae, voluptates delectus officiis maxime ullam veritatis aspernatur similique animi excepturi odio, nulla assumenda deserunt soluta atque distinctio incidunt quisquam voluptate error! Provident, ipsa debitis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rerum eius! Omnis aut fugit error reprehenderit nesciunt fuga labore provident exercitationem, corporis sint nam nisi tempora.</p>
+    </div>
+    </div>
+</div>   
+</body>
+</html>

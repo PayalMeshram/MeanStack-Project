@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .container{
+            border: 1px solid gray;
+            width: 500px;
+            text-align: center;
+                  }
+                  .btn{
+                      width: 200px;
+                      border-radius: 10px;
+                  }
+                  .text{
+                      margin: 20px;
+                  }
+                  p{
+                      margin-top: 10px;
+                      margin-bottom: 20px;
+                  }
+                  .blink{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color:red  }
+    50%{    color:pink }
+    100%{    color:red; }
+    
+}
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="blink">Love Calculator</h1><hr>
+        <input id="text1" class="text" type="text" placeholder="Your Name">
+        <input id="text2" class="text" type="text" placeholder="Crush Name">
+        <button class="btn btn-success m-2 " onclick="calculateLove();">Calculate</button>
+        <p id="lovePer">Love Percentage</p>
+    </div>
+    <script>
+        
+        function calculateLove(){
+            var x=document.getElementById("text1").value;    
+            var y=document.getElementById("text2").value;
+        //Check that the variables are not empty
+        if (x==null || x=="")
+        {
+              alert("Please enter your name!");  
+              return false;
+        }
+         else if (y==null || y=="")
+        {
+              alert("Please enter your crush name!");  
+              return false;
+        } 
+             var perentage = Math.floor(Math.random()*100 );
+             document.getElementById("lovePer").innerHTML =  x +" & "+ y +"<br>" + perentage + "%";
+             document.getElementById("text1").value= '';   
+            document.getElementById("text2").value='';
+
+                   
+        }
+    </script>
+</body>
+</html>

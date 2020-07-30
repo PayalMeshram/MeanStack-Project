@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .carousel-indicators li{
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border-radius: 100%;
+
+    }
+</style>
+
+<body>
+      <div class="container">
+        <h1>Bootstrap Carousel</h1>
+        <div class="carousel slide" id="imgSlide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#imgSlide" data-slide-to="0" ></li>
+                <li data-target="#imgSlide" data-slide-to="1"></li>
+                <li data-target="#imgSlide" data-slide-to="2"></li>
+                <li data-target="#imgSlide" data-slide-to="3"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active ">
+                    <div class="carousel-caption">
+                        <h1>Image-1</h1>
+                    </div>
+                     <img  src="../Images/img1.jpg" class="w-100 d-block" alt="not found">  
+                </div>
+                <div class="carousel-item ">
+                    <div class="carousel-caption">
+                        <h1>Image-2</h1>
+                    </div>
+                    <img  src="../Images/img4.jpg" class="w-100 d-block" alt="not found">
+               </div>
+               <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h1>Image-3</h1>
+                </div>
+                <img  src="../Images/img3.jpg" class="w-100 d-block" alt="not found">
+                </div>
+                <div class="carousel-item ">
+                    <div class="carousel-caption">
+                        <h1>Image-4</h1>
+                    </div>
+                    <img  src="../Images/img4.jpg" class="w-100 d-block" alt="not found">
+               </div>
+            </div>
+            <a href="#imgSlide" class="carousel-control-prev" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a href="#imgSlide" class="carousel-control-next" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

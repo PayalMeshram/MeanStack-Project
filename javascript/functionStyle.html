@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  
+    <div>
+      <h1>image using setAttribute</h1>
+        <img id="audi" src="../Images/charminar.jpg" width="200px" height="200px" alt="">
+        <br>
+        <button onclick="image();">click me</button>   
+    </div><br>
+    <div>
+      <h1>style using javascript</h1>
+      <p id="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet quia magni vero consectetur iste optio molestiae vitae et provident accusamus repudiandae nesciunt incidunt necessitatibus, totam aliquid sunt, labore unde quos accusantium, reiciendis dolore nulla commodi itaque. Eligendi consectetur soluta libero.lorem40 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed laboriosam sequi, nulla ex provident reprehenderit eos placeat dolor ipsam explicabo illum possimus tempora enim! Illum corrupti tenetur facere commodi quia ipsam, iusto cupiditate ullam illo perferendis magni omnis cumque quasi?</p>
+      <button onclick="f1();">change color</button>
+      <button onclick="f2();">change background color</button>
+      <button onclick="f3();">change font</button>
+    </div>
+    <script>  
+    
+  
+      function image(){
+        document.getElementById("audi").setAttribute('src','../Images/audi.jpg');
+      }
+      function f1(){
+        document.getElementById("p1").style.color = "red";
+      }
+      function f2(){
+        document.getElementById("p1").style.backgroundColor = "yellow";
+      }
+      function f3(){
+        document.getElementById("p1").style.fontSize = "30px";
+      }
+
+
+    </script>
+</body>
+
+</html>

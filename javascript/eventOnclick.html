@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+    <style>
+        .btn{
+            width:150px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+
+  
+    <button onclick="rey()" type="button" class="btn btn-primary btn-lg">  
+        <i class="fa fa-thumbs-up" fa-2x></i></class>
+
+     <span id="spn" class="badge badge-light"></span>  
+    </button>
+   
+</section>
+    <script>
+        var a =document.querySelector("#spn");
+        var count = 1;
+     function rey (){
+            a.textContent =count;
+            count++; 
+        };
+    </script>
+</body>
+</html>

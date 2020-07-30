@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<script>
+   
+    var products = [
+          {Name: "MI TV", Price: 35000.66, Photo:"../Images/MiTV.jpeg"},
+          {Name: "Reebok Shoes", Price: 7000.22, Photo:"../Images/shoe.jpeg"},
+          {Name: "i-Phone", Price: 82000.55, Photo:"../Images/iphone.jpg"},
+        
+      ];
+    function GetProduct(index){
+        document.getElementById("lblName").innerHTML=products[index].Name;
+        document.getElementById("imgpic").src=products[index].Photo;
+        document.getElementById("lblDetails").innerHTML="&#8377;" +products[index].Price;
+   } 
+   function bodyload(){
+       GetProduct(0);
+   }
+   var i=0;
+   function NextClick(){
+       i++;
+       GetProduct(i);
+   }
+   function PreviousClick(){
+       i--;
+       GetProduct(i);
+   }
+   </script>
+</head>
+<body onload="bodyload()" class="text-center">
+<div class="container">
+ <h2>Shopping Cart</h2> 
+ <div class="text-center">
+     <div class="card">
+         <div style="color:white" class="card-header bg-dark">
+        <h2 id="lblName" class="card-title"></h2></div>
+        <div class="card-body">
+            <button class="btn btn-secondary btn-lg" onclick="PreviousClick()"><</button>
+            <img src="" id="imgpic" height="400" width="400">
+            <button class="btn btn-secondary btn-lg" onclick="NextClick()">></button>
+        </div>
+        <div style="color:white" class="card-footer bg-dark">
+            <h3 id="lblDetails"></h3>
+        </div>
+     </div>
+ </div>  
+</div>
+</body>
+</html>

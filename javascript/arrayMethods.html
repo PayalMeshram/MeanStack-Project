@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrayMethods</title>
+</head>
+<body>
+    <h1>Array Methods</h1>
+    <script>
+        var array = [10,20,30,40,50];
+        document.write(array + "<br>");
+       array.push(60);     // add an element to the end of an array
+      document.write(array + "<br>");
+       array.pop();        // remove the last element of the array
+      document.write(array + "<br>");
+       array.shift();      // remove the first element of the array
+      document.write(array + "<br>");
+       array.unshift(35);  // add an element to the front an array
+      document.write(array + "<br>");
+        array.reverse();    // reversed the elements
+        document.write(array + "<br>");
+        var b = array.slice(1); // create a copy of an existing array
+        document.write(b+ "<br>");
+        array.splice(2);   // remove an element from an array (specified index position )
+        document.write(array);
+    </script>
+    
+
+</body>
+</html>

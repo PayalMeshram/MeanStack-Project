@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Animation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        img{  
+         height: 100px;
+         width: 100px;
+         position: relative;
+         left: 20px;
+         top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+  <h1>JQuery Animation</h1>
+    <div style="height: 400px; background-color: green;">
+        <img src="../Images/football_PNG52781.png" alt="">  
+    </div><hr>
+    <button id="left">move left</button>
+    <button id="top">move top</button>
+    
+    <script>
+      $(document).ready(function(){
+        $("#left").click(function(){
+        $("img").animate({left:"500px"},'0.9s',function(){
+          alert("football moves right")
+        });
+      });
+    
+      $("#top").click(function(){
+        $("img").animate({top:"300px"},'0.8s',function(){
+          alert("football moves bottom")
+        });
+      });
+      });
+
+    </script>
+    
+</body>
+</html>

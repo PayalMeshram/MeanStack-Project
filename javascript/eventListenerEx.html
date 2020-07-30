@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <section>
+        <h2 id="second-h2"></h2>
+        <button onclick="displayWishMsg ('Good Morning','red')" >Good Morning </button>
+        <button onclick="displayWishMsg ('Good Afternoon','blue')">Good Afternoon </button>
+        <button onclick="displayWishMsg ('Good Evening','yellow')">Good Evening </button>
+        <button onclick="displayWishMsg('Good Night','green') ">Good Night </button>
+    </section><br>
+   <button id="btn1"> click me</button>
+
+    <script>
+       //#1 Example of event listener
+         document.getElementById("btn1").addEventListener("click",f1);
+        function f1(){
+        alert("hello world");
+           }
+    
+    //#2 Example of event listener
+   var firstH2Element = document.querySelector("#second-h2");
+   function displayWishMsg (message,color){ 
+    firstH2Element.textContent = message;
+    firstH2Element.style.backgroundColor = color;
+    firstH2Element.style.textAlign ="center";
+    firstH2Element.style.padding = "10px";
+    firstH2Element.style.boxShadow = "0 0 15px black";
+   };
+       
+    </script>
+</body>
+</html>

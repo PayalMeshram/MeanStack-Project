@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!---CDN file for JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Basic jQuery</title>
+    <style>
+      .para{
+        border: 2px solid red ;
+        border-radius: 20px;
+        background-color: aqua;
+        padding: 10px;
+        font-size: 30px;
+      }
+    </style>
+
+</head>
+
+<body>
+<div class="container">
+<h1>JQery Selector</h1>
+<div>
+  <h2>box1</h2>
+  <input id="text1" type="text" placeholder="Enter a value">
+  <button id="btn1" class="btn btn-primary">Display enter value</button>
+  <p id="p1"></p> <br>
+</div><hr>
+<div>
+  <h2>Addition</h2>
+  <input id="num1" type="text" placeholder="Enter 1st no."><br><br>
+  <input id="num2" type="text" placeholder="Enter 2nd no."><br><br>
+  <button id="btn2" class="btn btn-danger">Addition</button>
+  <p id="p2"></p> <br> 
+
+</div> <hr>
+<div>
+  <h2>Styling using css in jQuery</h2>
+  <p id="p3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum id culpa magnam tempore cupiditate laboriosam quod ducimus laudantium, omnis, incidunt error. Ducimus amet exercitationem similique autem tempore est quod commodi, quisquam numquam quibusdam dolore! Delectus quidem exercitationem quas cumque dolorem.</p>
+  <button id="btn3">apply css</button><br>
+</div><hr>
+<div>
+  <h2>Add and remove class</h2>
+  <p id="p4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit laudantium consequuntur in sunt repudiandae, quos quas aut laborum quam placeat! Provident consequatur odio consequuntur reiciendis modi accusantium? Quam labore deleniti voluptate consequatur suscipit debitis necessitatibus, inventore minima asperiores consequuntur quo!</p>
+  <button id="btn4">Add class</button>
+  <button id="btn5">Remove class</button><br>
+</div><br><hr>
+<div>
+    <h1>Attribute value</h1>
+  <img src="../Images/nature1.jpg" alt="">
+  <button id="imgbtn">click here</button>
+</div>
+</div>
+  <script>
+    // selector in jQuery:
+    // $('#idname') , $('.classname') , $('tagname')
+
+//Get n set value :
+
+  $('#btn1').click(function(){
+  var a = $('#text1').val();
+  $('#p1').html(a);
+  }); 
+
+   
+  $('#btn2').click(function(){
+  var x = $('#num1').val();
+  var y = $('#num2').val();
+  var total = parseFloat(x) + parseFloat(y);
+  $('#p2').html(total);
+  //alert(total);
+  });
+
+  // css methods :
+
+  $('#btn3').click(function(){
+  $('#p3').css('backgroundColor','red'); // for single property
+  $('#p3').css('border','2px solid blue'); // for single property
+  $('#p3').css({'border-radius' : '15px','padding' : '10px','color':'white'});// for multiple properties 
+  }); 
+
+ // add class method :
+
+  $('#btn4').click(function(){
+  $('#p4').addClass('para');
+  
+  });
+
+   // remove class method :
+  $('#btn5').click(function(){
+  $('#p4').removeClass('para');
+  
+  });
+  //set attributes img
+  $("#imgbtn").click(function(){
+    $('img').attr({'height':'500px','width':'500px'})
+  })
+
+
+
+  </script>
+ 
+</body>
+</html>
